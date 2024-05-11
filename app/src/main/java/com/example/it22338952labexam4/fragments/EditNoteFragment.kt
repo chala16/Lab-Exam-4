@@ -50,7 +50,7 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
         currentTodo = args.todo!!
 
         binding.editTodoTitle.setText(currentTodo.todoTitle)
-        binding.editTodoTitle.setText(currentTodo.todoDesc)
+        binding.editTodoDesc.setText(currentTodo.todoDesc)
 
         binding.editTodoFab.setOnClickListener{
             val todoTitle = binding.editTodoTitle.text.toString().trim()
