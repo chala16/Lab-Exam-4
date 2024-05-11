@@ -30,5 +30,10 @@
         <action
             android:id="@+id/action_editNoteFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+
+        <argument
+            android:name="todo"
+            app:argType="com.example.it22338952labexam4.model.Todo"
+            app:nullable="true"/>
     </fragment>
 </navigation>
