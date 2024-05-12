@@ -54,9 +54,9 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
         val todoDesc = binding.addTodoDesc.text.toString().trim()
 
         if (todoTitle.isNotEmpty()){
-            // Create Todo object
+            // Create note object
             val todo = Todo(0, todoTitle, todoDesc)
-            // Add Todo to ViewModel
+            // Add note to ViewModel
             todoesViewModel.addTodo(todo)
 
             // Show toast message

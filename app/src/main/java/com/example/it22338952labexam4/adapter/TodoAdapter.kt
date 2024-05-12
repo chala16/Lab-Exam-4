@@ -47,14 +47,14 @@ class TodoAdapter : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
     // Bind data to the views in each ViewHolder
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
-        // Get the Todo object at the current position
+        // Get the note object at the current position
         val currentTodo = differ.currentList[position]
 
         // Bind the data to the views in the ViewHolder
         holder.itemBinding.TodoTitle.text = currentTodo.todoTitle
         holder.itemBinding.TodoDesc.text = currentTodo.todoDesc
 
-        // Set click listener to navigate to EditNoteFragment with the selected Todo
+        // Set click listener to navigate to EditNoteFragment with the selected note
         holder.itemView.setOnClickListener {
             val direction = HomeFragmentDirections.actionHomeFragmentToEditNoteFragment(currentTodo)
             it.findNavController().navigate(direction)

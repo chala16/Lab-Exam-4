@@ -8,20 +8,20 @@ import com.example.it22338952labexam4.model.Todo
 import com.example.it22338952labexam4.repository.TodoRepository
 import kotlinx.coroutines.launch
 
-// ViewModel class for managing Todo-related operations
+// ViewModel class for managing note-related operations
 class TodoViewModel(app: Application, private val todoRepository: TodoRepository): AndroidViewModel(app) {
 
-    // Add a new Todo
+    // Add a new note
     fun addTodo(todo: Todo) =
         viewModelScope.launch {
             todoRepository.insertTodo(todo)
         }
-    // Delete a Todo
+    // Delete a note
     fun deleteTodo(todo: Todo) =
         viewModelScope.launch {
             todoRepository.deleteTodo(todo)
         }
-    // Update a Todo
+    // Update a note
     fun updateTodo(todo: Todo) =
         viewModelScope.launch {
             todoRepository.updateTodo(todo)

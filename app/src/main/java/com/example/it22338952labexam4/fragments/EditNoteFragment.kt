@@ -52,10 +52,10 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
 
         // Initialize TodoViewModel
         todoesViewModel = (activity as MainActivity).todoViewModel
-        // Get current Todo from navigation arguments
+        // Get current note from navigation arguments
         currentTodo = args.todo!!
 
-        // Populate EditText fields with current Todo data
+        // Populate EditText fields with current note data
         binding.editTodoTitle.setText(currentTodo.todoTitle)
         binding.editTodoDesc.setText(currentTodo.todoDesc)
 
@@ -65,9 +65,9 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
             val todoDesc = binding.editTodoDesc.text.toString().trim()
 
             if (todoTitle.isNotEmpty()){
-                // Create updated Todo object
+                // Create updated note object
                 val todo = Todo(currentTodo.id, todoTitle, todoDesc)
-                // Update Todo in ViewModel
+                // Update note in ViewModel
                 todoesViewModel.updateTodo(todo)
                 // Navigate back to HomeFragment
                 view.findNavController().popBackStack(R.id.homeFragment, false)
@@ -79,13 +79,13 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
         }
     }
 
-    // Function to delete the current Todo
+    // Function to delete the current note
     private fun deleteTodo(){
         AlertDialog.Builder(activity).apply {
             setTitle("Delete Note")
             setMessage("Do you want to delete this note")
             setPositiveButton("Delete"){_,_ ->
-                // Delete Todo from ViewModel
+                // Delete note from ViewModel
                 todoesViewModel.deleteTodo(currentTodo)
                 // Show toast message
                 Toast.makeText(context, "Note Deleted!", Toast.LENGTH_SHORT).show()

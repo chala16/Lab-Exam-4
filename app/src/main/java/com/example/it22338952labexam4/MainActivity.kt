@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setupViewModel()
     }
 
-    // Setup ViewModel for managing Todo-related data
+    // Setup ViewModel for managing note-related data
     private fun setupViewModel(){
         // Create TodoRepository with TodoDatabase
         val todoRepository = TodoRepository(TodoDatabase(this))
