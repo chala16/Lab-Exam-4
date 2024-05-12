@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logoimage"
+        android:layout_width="522dp"
+        android:layout_height="938dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-61dp"
+        android:layout_marginTop="-81dp"
+        android:layout_marginEnd="-66dp"
+        android:layout_marginBottom="-71dp"
+        android:src="@drawable/todoapplogo" />
+
+</RelativeLayout>

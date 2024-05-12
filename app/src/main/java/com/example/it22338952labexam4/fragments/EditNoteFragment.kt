@@ -73,7 +73,7 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
             setMessage("Do you want to delete this note")
             setPositiveButton("Delete"){_,_ ->
                 todoesViewModel.deleteTodo(currentTodo)
-                Toast.makeText(context, "Note ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Note Deleted!", Toast.LENGTH_SHORT).show()
                 view?.findNavController()?.popBackStack(R.id.homeFragment, false)
             }
             setNegativeButton("Cancel", null)
